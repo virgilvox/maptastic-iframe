@@ -9,6 +9,12 @@ Needed it for CES for some displays.
 
 Just add ?url=WEBSITEURL to the end of the call to the index.
 
+All Params:
+
+w: width
+h: height
+url: Url to show in iframe
+
 ```
 SHIFT-Space: Toggle edit mode
 
