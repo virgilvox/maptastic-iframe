@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <style>
+
+  body{
+    margin:0;
+    padding:0;
+    background:black;
+    color:white;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <iframe src="http://zombo.com" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="pointcloud"></iframe>
+
+  <script>
+  var query = location.search.substr(1);
+  var result = {};
+  query.split("&").forEach(function(part) {
+    var item = part.split("=");
+    result[item[0]] = decodeURIComponent(item[1]);
+  });
+
+  var pc_iframe = document.getElementById("pointcloud");
+  if (result.url){
+    pc_iframe.src = result.url;
+  }
+
+  </script>
+
+  <script src="lib/maptastic.min.js"></script>
+  <script>
+  Maptastic("pointcloud");
+  </script>
+</body>
+
+</html>
